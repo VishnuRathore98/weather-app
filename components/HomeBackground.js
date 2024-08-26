@@ -2,6 +2,7 @@ import {
   Image,
   ImageBackground,
   StyleSheet,
+  View,
   useWindowDimensions,
 } from "react-native";
 import React from "react";
@@ -23,7 +24,7 @@ const HomeBackground = () => {
   const smokeOffsetY= height*0.4;
 
   return (
-    <>
+    <View style={{}}>
       <Canvas style={styles.canvaContainer}>
         <Rect x={0} y={0} width={width} height={height}>
           <LinearGradient
@@ -47,12 +48,12 @@ const HomeBackground = () => {
               positions={[-0.02, 0.54]}
             />
           </Rect>
-          <Line
+          {/* <Line
             p1={vec(width / 2, 0)}
             p2={vec(width / 2, smokeHeight)}
             strokeWidth={10}
             color={"red"}
-          />
+          /> */}
         </Canvas>
 
         <Image
@@ -60,7 +61,7 @@ const HomeBackground = () => {
           style={myStyles.houseImage}
         />
       </ImageBackground>
-    </>
+    </View>
   );
 };
 

@@ -3,6 +3,8 @@ import {  StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import HomeBackground from "./components/HomeBackground";
+import WeatherTabBar from "./components/tabbar/WeatherTabBar";
+import TabbarItems from "./components/tabbar/elements/TabbarItems";
 // import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 
 export default function App() {
@@ -10,19 +12,14 @@ export default function App() {
     <>
       <StatusBar style="light"/>
       <HomeBackground />
+      <WeatherTabBar />
+      
     </>
-    // <SafeAreaProvider>
-    //   <SafeAreaView style={styles.container}>
-    //   </SafeAreaView>
-    // </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });
